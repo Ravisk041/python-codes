@@ -1,0 +1,28 @@
+#function to add employess to a empty dictionary
+emp={}
+def employee_add(name,work_hours):
+  if name not in emp:
+    emp[name] = work_hours
+  else:
+    print(f'{name} already exists. Please enter a different name.')
+
+  #adding employees to dictionary
+  employee_add('ravi',400)
+  employee_add('sita',350)
+  employee_add('ravi',450) # Testing the else condition
+  print(emp)
+
+#function to find employee of the month
+  def emp_check(emp):
+  current_max=0
+  employee_of_the_month=''
+  for emp,hours in emp.items():
+    if hours > current_max:
+      current_max=hours
+      employee_of_the_month=emp
+      print(f'{employee_of_the_month} is the employee of the month because he worked for {current_max} hours')
+
+  #calling the function to find employee of the month
+  emp_check(emp)
+
+  
